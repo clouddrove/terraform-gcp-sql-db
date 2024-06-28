@@ -1,5 +1,4 @@
 
-
 variable "project_id" {
   description = "The ID of the project in which resources will be provisioned."
   type        = string
@@ -16,23 +15,19 @@ variable "authorized_networks" {
 
 variable "db_name" {
   description = "The name of the SQL Database instance"
+  type        = string
   default     = "example-postgres-public"
 }
 
 variable "cloudsql_pg_sa" {
-  type        = string
   description = "IAM service account user created for Cloud SQL."
+  type        = string
 }
 
 variable "database_flags" {
+  description = "flags for Cloud SQL."
   type = list(object({
     name  = string
     value = string
   }))
-}
-
-variable "user_labels" {
-  description = "The key/value labels for the Cloud SQL instances."
-  type        = map(string)
-  default     = {}
 }

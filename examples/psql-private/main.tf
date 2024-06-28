@@ -1,7 +1,6 @@
 
-
 module "postgresql-db" {
-  source  = "../../module/postgre"
+  source = "../../module/postgre"
 
   name                 = var.db_name
   random_instance_name = false
@@ -14,12 +13,12 @@ module "postgresql-db" {
   disk_size            = 10
   disk_type            = "PD_SSD"
 
-  deletion_protection  = false
+  deletion_protection = false
 
   ip_configuration = {
     ipv4_enabled                                  = false
     enable_private_path_for_google_cloud_services = true
-    private_network                               = "projects/virtual-voyage-423511-d7/global/networks/module-test"   # Ensure private connection in vpc are 
+    private_network                               = "projects/project-id/global/networks/module-test" # Ensure private connection in vpc are enabled.
     require_ssl                                   = false
     ssl_mode                                      = "ENCRYPTED_ONLY"
     allocated_ip_range                            = ""
