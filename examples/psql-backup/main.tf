@@ -1,6 +1,6 @@
 
 module "postgresql" {
-  source  = "../../module/postgre"
+  source = "../../module/postgre"
 
   name                 = "example-postgres"
   random_instance_name = true
@@ -39,7 +39,7 @@ resource "google_monitoring_notification_channel" "email" {
 }
 
 module "backup" {
-  source  = "../../module/backup"
+  source = "../../module/backup"
 
   region                      = "us-central1"
   project_id                  = var.project_id
