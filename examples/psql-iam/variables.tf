@@ -16,11 +16,12 @@ variable "authorized_networks" {
 variable "db_name" {
   description = "The name of the SQL Database instance"
   default     = "example-postgres-public"
+  type        = string
 }
 
 variable "cloudsql_pg_sa" {
-  type        = string
   description = "IAM service account user created for Cloud SQL."
+  type        = string
 }
 
 variable "database_flags" {
@@ -32,6 +33,6 @@ variable "database_flags" {
 
 variable "user_labels" {
   description = "The key/value labels for the Cloud SQL instances."
-  type        = map(string)
   default     = {}
+  type        = map(string)
 }
