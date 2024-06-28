@@ -40,7 +40,6 @@ variable "allocated_ip_range" {
   default     = null
 }
 
-// Master
 variable "tier" {
   description = "The tier for the master instance."
   type        = string
