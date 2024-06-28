@@ -1,12 +1,12 @@
 module "safer-mysql-db" {
-  source  = "../../module/pvt-mysql"
+  source = "../../module/pvt-mysql"
 
   name                 = var.db_name
   random_instance_name = true
   project_id           = var.project_id
 
   deletion_protection = false
-  
+
 
   database_version = "MYSQL_8_0"
   region           = "us-central1"
@@ -40,8 +40,8 @@ module "safer-mysql-db" {
     }
   ]
 
-  vpc_network        = "projects/virtual-voyage-423511-d7/global/networks/module-test"   # Ensure private connection in vpc are enabled
+  vpc_network = "projects/project-id/global/networks/module-test" # Ensure private connection in vpc are enabled
   require_ssl = false
-  ssl_mode = "ENCRYPTED_ONLY"
+  ssl_mode    = "ENCRYPTED_ONLY"
 
 }
