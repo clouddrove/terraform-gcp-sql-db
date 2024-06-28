@@ -7,6 +7,7 @@ variable "project_id" {
 variable "db_name" {
   description = "The name of the SQL Database instance"
   default     = "example-mysql-public"
+  type        = string
 }
 
 variable "authorized_networks" {
