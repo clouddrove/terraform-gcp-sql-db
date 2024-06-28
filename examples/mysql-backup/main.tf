@@ -8,6 +8,7 @@ module "mysql" {
   project_id           = var.project_id
   zone                 = "us-central1-a"
   region               = "us-central1"
+  tier             = "db-n1-standard-1"
   deletion_protection  = false
 
   additional_users = [

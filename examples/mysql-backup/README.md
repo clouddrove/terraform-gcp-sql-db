@@ -1,4 +1,4 @@
-# Cloud SQL Database Backup Example
+# Cloud MySQL Database Backup Example
 
 This example demonstrates how to create:
 
@@ -15,28 +15,6 @@ Create resources with Terraform:
 terraform init
 terraform plan
 terraform apply
-
-
-Here's a `README.md` for the Cloud SQL Database Backup example:
-
-```markdown
-# Cloud SQL Database Backup Example
-
-This example demonstrates how to create:
-
-- A MySQL CloudSQL Instance
-- A GCS Bucket for storing the Backup
-- Workflows for exports (external backups) and (internal) backups
-
-## Run Terraform
-
-Create resources with Terraform:
-
-```bash
-terraform init
-terraform plan
-terraform apply
-```
 
 To remove all resources created by Terraform:
 
@@ -59,4 +37,3 @@ terraform destroy
 | instance_name          | The name of the SQL instance               |
 | mysql-password         | n/a                                        |
 | project_id             | The project ID used                        |
-|
