@@ -1,6 +1,6 @@
 
 module "postgresql-db" {
-  source  = "../../module/postgre"
+  source = "../../module/postgre"
 
   name                 = var.db_name
   random_instance_name = false
@@ -13,7 +13,7 @@ module "postgresql-db" {
   disk_size            = 10
   disk_type            = "PD_SSD"
 
-  deletion_protection  = false
+  deletion_protection = false
 
   ip_configuration = {
     ipv4_enabled        = true
