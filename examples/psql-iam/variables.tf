@@ -30,9 +30,3 @@ variable "database_flags" {
     value = string
   }))
 }
-
-variable "user_labels" {
-  description = "The key/value labels for the Cloud SQL instances."
-  default     = {}
-  type        = map(string)
-}

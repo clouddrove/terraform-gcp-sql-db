@@ -22,6 +22,7 @@ module "postgresql-db" {
     require_ssl                                   = false
     ssl_mode                                      = "ENCRYPTED_ONLY"
     allocated_ip_range                            = ""
+    authorized_networks                           = var.authorized_networks
   }
 
   password_validation_policy_config = {

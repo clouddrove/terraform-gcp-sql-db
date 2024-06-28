@@ -358,7 +358,7 @@ variable "insights_config" {
   default = null
 }
 
-   
+
 variable "ssl_mode" {
   description = "Used to block Terraform from deleting replica SQL Instances."
   type        = string

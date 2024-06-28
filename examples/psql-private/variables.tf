@@ -19,11 +19,6 @@ variable "db_name" {
   default     = "example-postgres-public"
 }
 
-variable "cloudsql_pg_sa" {
-  description = "IAM service account user created for Cloud SQL."
-  type        = string
-}
-
 variable "database_flags" {
   description = "flags for Cloud SQL."
   type = list(object({

@@ -4,11 +4,6 @@ variable "project_id" {
   description = "The project to run tests against"
 }
 
-variable "network_name" {
-  default = "mysql-private"
-  type    = string
-}
-
 variable "db_name" {
   type        = string
   description = "The name of the SQL Database instance"
