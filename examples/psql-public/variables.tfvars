@@ -1,6 +1,6 @@
-project_id     = "virtual-voyage-423511-d7"
-db_name        = "testing-module"
-cloudsql_pg_sa = "tanveer.shaikh@clouddrove.com"
+project_id = "project-id"
+db_name    = "testing-module"
+
 database_flags = [
   {
     name  = "cloudsql.enable_pgaudit"

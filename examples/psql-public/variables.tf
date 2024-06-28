@@ -9,11 +9,12 @@ variable "authorized_networks" {
     name  = "sample-gcp-health-checkers-range"
     value = "130.211.0.0/28"
   }]
-  type        = list(map(string))
   description = "List of mapped public networks authorized to access to the instances. Default - short range of GCP health-checkers IPs"
+  type        = list(map(string))
 }
 
 variable "db_name" {
   description = "The name of the SQL Database instance"
   default     = "example-postgres-public"
+  type        = string
 }
