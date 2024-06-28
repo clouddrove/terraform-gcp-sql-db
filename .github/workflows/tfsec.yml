@@ -4,8 +4,14 @@ on:
   pull_request:
   workflow_dispatch:
 jobs:
-  tfsec:
+  tfsec-mysql:
     uses: clouddrove/github-shared-workflows/.github/workflows/tfsec.yml@1.2.6
     secrets: inherit
     with:
-      working_directory: '.'
+      working_directory: './examples/mysql-private'
+
+  tfsec-psql:
+    uses: clouddrove/github-shared-workflows/.github/workflows/tfsec.yml@1.2.6
+    secrets: inherit
+    with:
+      working_directory: './examples/psql-private'
