@@ -56,6 +56,6 @@ module "backup" {
   export_uri            = google_storage_bucket.backup.url
   backup_retention_time = 1
   backup_schedule       = "5 * * * *"
-  export_schedule       = "10 * * * *"
+  export_schedule       = "15 * * * *"
   compress_export       = false
 }
