@@ -1,7 +1,7 @@
 
 
 module "mysql-db" {
-  source  = "../../module/mysql"
+  source = "../../module/mysql"
 
 
   name                 = var.db_name

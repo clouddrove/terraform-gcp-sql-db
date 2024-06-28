@@ -1,2 +1,2 @@
-project_id = "virtual-voyage-423511-d7"
-db_name = "testing-module"
+project_id = "project-id"
+db_name    = "mysql-public"
