@@ -1,6 +1,6 @@
 
 module "mysql" {
-  source  = "../../module/mysql"
+  source = "../../module/mysql"
 
   name                 = "example-mysql-public"
   database_version     = "MYSQL_8_0"
@@ -8,7 +8,7 @@ module "mysql" {
   project_id           = var.project_id
   zone                 = "us-central1-a"
   region               = "us-central1"
-  tier             = "db-n1-standard-1"
+  tier                 = "db-n1-standard-1"
   deletion_protection  = false
 
   additional_users = [
@@ -28,7 +28,7 @@ module "mysql" {
     },
   ]
 
-  
+
   ip_configuration = {
     ipv4_enabled        = true
     private_network     = null
@@ -48,7 +48,7 @@ resource "google_storage_bucket" "backup" {
 }
 
 module "backup" {
-  source  = "../../module/backup"
+  source = "../../module/backup"
 
   region                = "us-central1"
   project_id            = var.project_id
