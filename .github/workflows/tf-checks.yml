@@ -6,12 +6,12 @@ on:
   workflow_dispatch:
 jobs:
   mysql-backup:
-    uses: clouddrove/github-shared-workflows/.github/workflows/tf-checks.yml@1.2.5
+    uses: clouddrove/github-shared-workflows/.github/workflows/tf-checks.yml@1.2.6
     with:
       working_directory: './examples/mysql-backup/'
  
   mysql-pvt:
-    uses: clouddrove/github-shared-workflows/.github/workflows/tf-checks.yml@1.2.5
+    uses: clouddrove/github-shared-workflows/.github/workflows/tf-checks.yml@1.2.6
     with:
       working_directory: './examples/mysql-private/'
 
