@@ -6,36 +6,36 @@ on:
   workflow_dispatch:
 jobs:
   mysql-backup:
-    uses: clouddrove/github-shared-workflows/.github/workflows/tf-checks.yml@feat/update-tf 
+    uses: clouddrove/github-shared-workflows/.github/workflows/tf-checks.yml@1.2.6
     with:
       working_directory: './examples/mysql-backup/'
  
   mysql-pvt:
-    uses: clouddrove/github-shared-workflows/.github/workflows/tf-checks.yml@feat/update-tf 
+    uses: clouddrove/github-shared-workflows/.github/workflows/tf-checks.yml@1.2.6
     with:
       working_directory: './examples/mysql-private/'
 
   mysql-public:
-    uses: clouddrove/github-shared-workflows/.github/workflows/tf-checks.yml@feat/update-tf 
+    uses: clouddrove/github-shared-workflows/.github/workflows/tf-checks.yml@1.2.6
     with:
       working_directory: './examples/mysql-public/'
 
   psql-backup:
-    uses: clouddrove/github-shared-workflows/.github/workflows/tf-checks.yml@feat/update-tf 
+    uses: clouddrove/github-shared-workflows/.github/workflows/tf-checks.yml@1.2.6
     with:
       working_directory: './examples/psql-backup/'
 
-  # psql-iam:
-  #   uses: clouddrove/github-shared-workflows/.github/workflows/tf-checks.yml@1.2.6
-  #   with:
-  #     working_directory: './examples/psql-iam/'
+  psql-iam:
+    uses: clouddrove/github-shared-workflows/.github/workflows/tf-checks.yml@1.2.6
+    with:
+      working_directory: './examples/psql-iam/'
 
-  # psql-private:
-  #   uses: clouddrove/github-shared-workflows/.github/workflows/tf-checks.yml@1.2.6
-  #   with:
-  #     working_directory: './examples/psql-private/'
+  psql-private:
+    uses: clouddrove/github-shared-workflows/.github/workflows/tf-checks.yml@1.2.6
+    with:
+      working_directory: './examples/psql-private/'
 
-  # psql-public:
-  #   uses: clouddrove/github-shared-workflows/.github/workflows/tf-checks.yml@1.2.6
-  #   with:
-  #     working_directory: './examples/psql-public/'
+  psql-public:
+    uses: clouddrove/github-shared-workflows/.github/workflows/tf-checks.yml@1.2.6
+    with:
+      working_directory: './examples/psql-public/'
