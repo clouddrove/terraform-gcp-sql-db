@@ -9,13 +9,11 @@ jobs:
     uses: clouddrove/github-shared-workflows/.github/workflows/tf-checks.yml@feat/update-tf 
     with:
       working_directory: './examples/mysql-backup/'
-      provider: gcp
  
   mysql-pvt:
     uses: clouddrove/github-shared-workflows/.github/workflows/tf-checks.yml@feat/update-tf 
     with:
       working_directory: './examples/mysql-private/'
-      provider: gcp
 
   # mysql-public:
   #   uses: clouddrove/github-shared-workflows/.github/workflows/tf-checks.yml@1.2.6
