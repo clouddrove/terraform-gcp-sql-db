@@ -15,15 +15,15 @@ jobs:
     with:
       working_directory: './examples/mysql-private/'
 
-  # mysql-public:
-  #   uses: clouddrove/github-shared-workflows/.github/workflows/tf-checks.yml@1.2.6
-  #   with:
-  #     working_directory: './examples/mysql-public/'
+  mysql-public:
+    uses: clouddrove/github-shared-workflows/.github/workflows/tf-checks.yml@feat/update-tf 
+    with:
+      working_directory: './examples/mysql-public/'
 
-  # psql-backup:
-  #   uses: clouddrove/github-shared-workflows/.github/workflows/tf-checks.yml@1.2.6
-  #   with:
-  #     working_directory: './examples/psql-backup/'
+  psql-backup:
+    uses: clouddrove/github-shared-workflows/.github/workflows/tf-checks.yml@feat/update-tf 
+    with:
+      working_directory: './examples/psql-backup/'
 
   # psql-iam:
   #   uses: clouddrove/github-shared-workflows/.github/workflows/tf-checks.yml@1.2.6
