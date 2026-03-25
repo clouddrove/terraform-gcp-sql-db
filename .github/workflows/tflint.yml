@@ -5,7 +5,16 @@ on:
   pull_request:
   workflow_dispatch:
 jobs:
-  tf-lint:
-    uses: clouddrove/github-shared-workflows/.github/workflows/tf-lint.yml@2.0.0
-    secrets:
-      GITHUB: ${{ secrets.GITHUB }}
+  tfsec:
+    uses: clouddrove/github-shared-workflows/.github/workflows/tfsec.yml@2.1.1
+    secrets: inherit
+    with:
+      working_directory: '.'
+  tf-checks-complete-example:
+    uses: clouddrove/github-shared-workflows/.github/workflows/tf-checks.yml@2.1.1
+    with:
+      working_directory: './examples/complete/'
+  tf-checks-basic-example:
+    uses: clouddrove/github-shared-workflows/.github/workflows/tf-checks.yml@2.1.1
+    with:
+      working_directory: './examples/basic/'
