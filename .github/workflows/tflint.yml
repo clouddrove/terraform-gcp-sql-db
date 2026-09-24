@@ -9,3 +9,4 @@ jobs:
     uses: clouddrove/github-shared-workflows/.github/workflows/tf-lint.yml@v2.1.5
     secrets:
       GITHUB: ${{ secrets.GITHUB }}
+
